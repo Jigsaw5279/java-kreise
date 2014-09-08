@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Rechteck()
+comment1.params=breite\ hoehe
+comment1.target=Rechteck(double,\ double)
+comment2.params=breite
+comment2.target=void\ setBreite(double)
+comment3.params=
+comment3.target=double\ getBreite()
+comment4.params=hoehe
+comment4.target=void\ setHoehe(double)
+comment5.params=
+comment5.target=double\ getHoehe()
+comment6.params=p
+comment6.target=boolean\ getroffen(Punkt)
+comment7.params=b
+comment7.target=void\ zeichne(sum.kern.Buntstift)
+comment8.params=aenderung
+comment8.target=void\ groesseAendern(double)
+numComments=9

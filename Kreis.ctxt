@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Kreis()
+comment1.params=radius
+comment1.target=Kreis(double)
+comment2.params=mittelpunkt\ radius
+comment2.target=Kreis(Punkt,\ double)
+comment3.params=r
+comment3.target=void\ setRadius(double)
+comment4.params=
+comment4.target=double\ getRadius()
+comment5.params=p
+comment5.target=boolean\ getroffen(Punkt)
+comment6.params=b
+comment6.target=void\ zeichne(sum.kern.Buntstift)
+comment7.params=aenderung
+comment7.target=void\ groesseAendern(double)
+numComments=8

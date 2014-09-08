@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=w\ h
+comment0.target=Ansicht(int,\ int)
+comment1.params=objekte
+comment1.target=void\ neuZeichnen(java.util.ArrayList)
+comment2.params=
+comment2.target=void\ loescheAlles()
+comment3.params=z
+comment3.target=void\ zeichneObjekt(Zeichenobjekt)
+numComments=4
