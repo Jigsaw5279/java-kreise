@@ -1,7 +1,9 @@
-java-kreise
+java-kreise (dev)
 ===========
 
-Kleines Projekt in Java, entstanden als *Lehrstunde* für einen guten Freund
+Kleines Projekt in Java, entstanden als *Lehrstunde* für einen guten Freund.
+
+Hier finden sich jetzt aber die Produkte meiner Langeweile, die sich daraus ergeben haben.
 
 Hilfe
 ------
