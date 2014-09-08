@@ -11,12 +11,14 @@ Hilfe
 - `k` - Erzeugt einen neuen Kreis
 - `r` - Erzeugt ein neues Rechteck
 - `c` - Löscht den aktuellen Inhalt bis zum nächsten redraw
-- `o` - Öffnet das Optionsmenü
+- `o` - Öffnet das Optionsmenü, ist ein Objekt ausgewählt, so lässt es sich mit diesem Menü bearbeiten
 - `linksklick` - wählt ein Objekt aus
 - `w` - Bewegt das gewählte Objekt nach ***oben***
 - `a` - Bewegt das gewählte Objekt nach ***links***
 - `s` - Bewegt das gewählte Objekt nach ***unten***
 - `d` - Bewegt das gewählte Objekt nach ***rechts*** 
+
+Zum ***starten*** des Programms `static main` der Klasse `Start` im Standardpaket ausführen.
 
 Branches
 --------
