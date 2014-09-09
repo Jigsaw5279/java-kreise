@@ -1,7 +1,9 @@
 java-kreise
 ===========
 
-Kleines Projekt in Java, entstanden als *Lehrstunde* für einen guten Freund
+Kleines Projekt in Java, entstanden als *Lehrstunde* für einen guten Freund.
+
+Dieser Branch `fabio` ist für das "Ferntutorium" gedacht.
 
 Hilfe
 ------
