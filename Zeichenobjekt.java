@@ -89,4 +89,5 @@ public abstract class Zeichenobjekt
     public abstract boolean getroffen(Punkt p);
     
     public abstract void groesseAendern(double aenderung);
+    
 }

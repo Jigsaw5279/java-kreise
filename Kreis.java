@@ -1,5 +1,5 @@
 import sum.kern.*;
-import java.awt.*;
+import java.awt.Color;
 /**
  * Write a description of class Kreis here.
  * 
@@ -26,6 +26,10 @@ public class Kreis extends Zeichenobjekt
         this.radius = radius;
     }
     
+    public void setzeFarbe(Color f) {
+        this.farbe = farbe;
+    }
+    
     public void setRadius(double r) {
         if(r > 0) {
             this.radius = r;
@@ -37,7 +41,7 @@ public class Kreis extends Zeichenobjekt
     public double getRadius() {
         return this.radius;
     }
-    
+
     @Override
     public boolean getroffen(Punkt p)
     {

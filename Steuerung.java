@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import javax.swing.*;
 
 /**
- * @author 
- * @version 
+ * @Fabio Brink und Jens Caspari    
+ * @1.0.1
  */
 public class Steuerung
 {
@@ -14,12 +14,19 @@ public class Steuerung
     private ArrayList<Zeichenobjekt> objekte;
     private Zeichenobjekt aktiv;
     private double schritt = 1d;
-
             
     public Steuerung()
     {
         this.ansicht = new Ansicht(200,200);
         this.objekte = new ArrayList<Zeichenobjekt>();
+    }
+    
+    public void setFarbe(Color f) {
+        aktiv.farbe = f;
+    }
+    
+    public Color getFarbe() {
+        return aktiv.farbe;
     }
     
     public void start() {
@@ -100,6 +107,7 @@ public class Steuerung
     
     private void oeffneOptionen() {
        // Aufruf der statischen Methode showMessageDialog()
+       if (this.aktiv == null) {
         String eingabe = JOptionPane.showInputDialog(null,"Schrittweite (double)",
                                                              "Optionen",
                                                              JOptionPane.PLAIN_MESSAGE);
@@ -107,6 +115,14 @@ public class Steuerung
             this.schritt = Double.parseDouble(eingabe);
         } catch(Exception e) {
             System.err.println(e.getMessage());
+        }
+       } else {
+           String eingabe = JOptionPane.showInputDialog(null, "Farbe (Color)", "Farboptionen", 
+           JOptionPane.PLAIN_MESSAGE);
+           try {
+           } catch(Exception e) {
+                System.err.println(e.getMessage());
+           }
         }
     }
     
@@ -190,9 +206,10 @@ public class Steuerung
                 JTextField radius = new JTextField();
                 JTextField x = new JTextField();
                 JTextField y = new JTextField();
+                JTextField farbe = new JTextField();
                 Object[] message = {"Radius (double)", radius,
                                     "X (double)", x,
-                                    "Y (double)", y};
+                                    "Y (double)", y, };
  
                 JOptionPane pane = new JOptionPane( message, 
                                                 JOptionPane.PLAIN_MESSAGE, 
@@ -201,6 +218,7 @@ public class Steuerung
  
                 Kreis k = new Kreis();
                 try {
+
                     k.setRadius(Double.parseDouble(radius.getText()));
                     k.setMittelpunkt(
                         new Punkt(
@@ -214,8 +232,4 @@ public class Steuerung
                 }
                 this.objekte.add(k);
     }
-    
-    
-    
-    
 }
