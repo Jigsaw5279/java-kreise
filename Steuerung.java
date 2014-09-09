@@ -118,8 +118,26 @@ public class Steuerung
         }
        } else {
            JColorChooser j = new JColorChooser(this.aktiv.getFarbe());
+           
+           // Eingabefelder benennen
+           Object[] eingabeFelder = {
+               "", j
+            };
+            
+            // Dialog erzeugen
+            JOptionPane dialog = new JOptionPane(eingabeFelder, // Übergeben der Eingabefelder
+                    JOptionPane.PLAIN_MESSAGE, // Einfache Textanzeige
+                    JOptionPane.OK_CANCEL_OPTION); // OK und ABBRECHEN Buttons
+                    
+            dialog.createDialog(null, "Kreis bearbeiten").setVisible(true); // Dialog benennen und sichtbar machen
+            
+           // Nachdem der Dialog geschlossen wurde
            try {
+               this.aktiv.setFarbe(
+                j.getColor() // Abfragen der aktuell gewählten Farbe aus dem Dialog
+               );
            } catch(Exception e) {
+                // Falls ein Fehler auftritt
                 System.err.println(e.getMessage());
            }
         }
