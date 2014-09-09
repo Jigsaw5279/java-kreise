@@ -90,4 +90,5 @@ public abstract class Zeichenobjekt
     
     public abstract void groesseAendern(double aenderung);
     
+    public abstract void optionsMenue();
 }

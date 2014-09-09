@@ -1,5 +1,8 @@
 import sum.kern.*;
 import java.awt.Color;
+import javax.swing.JColorChooser;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 /**
  * Write a description of class Kreis here.
  * 
@@ -58,5 +61,29 @@ public class Kreis extends Zeichenobjekt
     @Override
     public void groesseAendern(double aenderung) {
         this.setRadius(this.getRadius() + aenderung);
+    }
+    
+    @Override
+    public void optionsMenue() {
+        JTextField radius = new JTextField(String.valueOf(this.radius));
+        JTextField x = new JTextField(String.valueOf(this.getMittelpunkt().getX()));
+        JTextField y = new JTextField(String.valueOf(this.getMittelpunkt().getY()));
+        JColorChooser j = new JColorChooser(this.farbe);
+           Object[] message = {"Radius (double)", radius,
+                               "X (double)", x,
+                               "Y (double)", y,
+                               "Farbe (Color)", j, };
+              JOptionPane pane = new JOptionPane(message, JOptionPane.PLAIN_MESSAGE, JOptionPane.OK_CANCEL_OPTION);
+                 pane.createDialog(null, "Kreis bearbeiten").setVisible(true);
+        try {
+           this.setRadius(Double.parseDouble(radius.getText()));
+           this.setFarbe(j.getColor());
+           Punkt p = new Punkt(
+           Double.parseDouble(x.getText()),
+           Double.parseDouble(y.getText()));
+           this.setMittelpunkt(p);
+        } catch (NumberFormatException e) {
+         JOptionPane.showMessageDialog(null, e.getMessage());
+        }
     }
 }

@@ -117,31 +117,10 @@ public class Steuerung
             System.err.println(e.getMessage());
         }
        } else {
-           JColorChooser j = new JColorChooser(this.aktiv.getFarbe());
-           
-           // Eingabefelder benennen
-           Object[] eingabeFelder = {
-               "", j
-            };
-            
-            // Dialog erzeugen
-            JOptionPane dialog = new JOptionPane(eingabeFelder, // Übergeben der Eingabefelder
-                    JOptionPane.PLAIN_MESSAGE, // Einfache Textanzeige
-                    JOptionPane.OK_CANCEL_OPTION); // OK und ABBRECHEN Buttons
-                    
-            dialog.createDialog(null, "Kreis bearbeiten").setVisible(true); // Dialog benennen und sichtbar machen
-            
-           // Nachdem der Dialog geschlossen wurde
-           try {
-               this.aktiv.setFarbe(
-                j.getColor() // Abfragen der aktuell gewählten Farbe aus dem Dialog
-               );
-           } catch(Exception e) {
-                // Falls ein Fehler auftritt
-                System.err.println(e.getMessage());
+             this.aktiv.optionsMenue();
            }
         }
-    }
+    
     
     private void verarbeiteMaus(Maus m) {
         if(!this.gedrueckt) {
@@ -186,67 +165,15 @@ public class Steuerung
     }
     
     private void neuesRechteck() {
-        // Erstellung Array vom Datentyp Object, Hinzufügen der Komponenten     
-        JTextField hoehe = new JTextField();
-        JTextField breite = new JTextField();
-        JTextField x = new JTextField();
-        JTextField y = new JTextField();
-        Object[] message = {"Höhe (double)", hoehe, 
-                            "Breite (double)", breite,
-                            "X (double)", x,
-                            "Y (double)", y};
-
-        JOptionPane pane = new JOptionPane( message, 
-                                        JOptionPane.PLAIN_MESSAGE, 
-                                        JOptionPane.OK_CANCEL_OPTION);
-        pane.createDialog(null, "Neues Rechteck").setVisible(true);
-
         Rechteck r = new Rechteck();
-        try {
-            r.setHoehe(Double.parseDouble(hoehe.getText()));
-            r.setBreite(Double.parseDouble(breite.getText()));
-            r.setMittelpunkt(
-                new Punkt(
-                    Double.parseDouble(x.getText()),
-                    Double.parseDouble(y.getText())
-                )
-            );
-                
-        } catch(Exception e) {
-            System.err.println(e.getMessage());
-        }
+        r.optionsMenue();
         this.objekte.add(r);
     }
     
     private void neuerKreis() {
         // Erstellung Array vom Datentyp Object, Hinzufügen der Komponenten     
-                JTextField radius = new JTextField();
-                JTextField x = new JTextField();
-                JTextField y = new JTextField();
-                JTextField farbe = new JTextField();
-                Object[] message = {"Radius (double)", radius,
-                                    "X (double)", x,
-                                    "Y (double)", y, };
- 
-                JOptionPane pane = new JOptionPane( message, 
-                                                JOptionPane.PLAIN_MESSAGE, 
-                                                JOptionPane.OK_CANCEL_OPTION);
-                pane.createDialog(null, "Neuer Kreis").setVisible(true);
- 
                 Kreis k = new Kreis();
-                try {
-
-                    k.setRadius(Double.parseDouble(radius.getText()));
-                    k.setMittelpunkt(
-                        new Punkt(
-                            Double.parseDouble(x.getText()),
-                            Double.parseDouble(y.getText())
-                        )
-                    );
-                        
-                } catch(Exception e) {
-                    System.err.println(e.getMessage());
-                }
+                k.optionsMenue();
                 this.objekte.add(k);
     }
 }

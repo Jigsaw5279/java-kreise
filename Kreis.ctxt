@@ -17,4 +17,6 @@ comment7.params=b
 comment7.target=void\ zeichne(sum.kern.Buntstift)
 comment8.params=aenderung
 comment8.target=void\ groesseAendern(double)
-numComments=9
+comment9.params=
+comment9.target=void\ optionsMenue()
+numComments=10
