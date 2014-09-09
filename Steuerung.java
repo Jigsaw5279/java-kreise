@@ -117,8 +117,7 @@ public class Steuerung
             System.err.println(e.getMessage());
         }
        } else {
-           String eingabe = JOptionPane.showInputDialog(null, "Farbe (Color)", "Farboptionen", 
-           JOptionPane.PLAIN_MESSAGE);
+           JColorChooser j = new JColorChooser(this.getColor());
            try {
            } catch(Exception e) {
                 System.err.println(e.getMessage());
