@@ -117,7 +117,7 @@ public class Steuerung
             System.err.println(e.getMessage());
         }
        } else {
-           JColorChooser j = new JColorChooser(this.getColor());
+           JColorChooser j = new JColorChooser(this.aktiv.getFarbe());
            try {
            } catch(Exception e) {
                 System.err.println(e.getMessage());
